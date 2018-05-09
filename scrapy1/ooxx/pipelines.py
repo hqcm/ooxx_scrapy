@@ -4,9 +4,6 @@ from scrapy.exceptions import DropItem
 import scrapy
 
 class ooxxScrapyPipeline(ImagesPipeline):
-# Don't forget to add your pipeline to the ITEM_PIPELINES setting
-# See: https://doc.scrapy.org/en/latest/topics/item-pipeline.html
-
     #通过修改file_path函数来改变图片保存的路径
     def file_path(self, request, response=None, info=None):
         #每套图的分类目录
