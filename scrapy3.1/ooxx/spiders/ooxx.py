@@ -18,7 +18,7 @@ class ooxx(scrapy.Spider):
     start_urls=['http://jandan.net/ooxx']
     #第一个函数名字需为parse，否则callback会表示没有定义，原因不明
     def parse(self,response):
-        #获得煎蛋网oxxx首页的页码
+        '获得煎蛋网oxxx首页的页码'
         page_number=re.findall(r'<span class="current-comment-page">\[(\d\d)\]</span>', response.body.decode())[0]
         for i in range(2):
             #获得的页码为字符串类型，需要转换
